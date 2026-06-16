@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Родинне коло — Тепла зустріч родин</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background: #f7f7f7;
+        color: #333;
+    }
+
+    .hero {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin: 10px 0 0;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin: 5px 0 15px;
+        font-weight: 500;
+    }
+
+    .tags {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .section {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 15px 0;
+    }
+
+    .info-block {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .floating-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #ff7b00;
+        color: white;
+        padding: 16px 22px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        z-index: 999;
+    }
+
+    /* Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .modal-content {
+        background: #fff;
+        padding: 24px;
+        border-radius: 12px;
+        width: 90%;
+        max-width: 420px;
+        position: relative;
+    }
+
+    .close {
+        position: absolute;
+        right: 16px;
+        top: 12px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    form label {
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+    }
+
+    form input, form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    form button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 14px;
+        background: #ff7b00;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    #result {
+        margin-top: 10px;
+        font-weight: bold;
+        color: green;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <img src="FAMILY_PHOTO.jpg" alt="Родинне коло">
+
+    <h1>Родинне коло</h1>
+    <h2>Тепла зустріч родин</h2>
+
+    <div class="tags">✨ Знайомства ✨ Спілкування ✨ Ігри ✨ Дружба ✨</div>
+
+    <div class="info-block">
+        <div class="section">
+            21 червня проводимо теплу зустріч родин у Цюриху.<br>
+            Без офіціозу — знайомства, спілкування, діти, чай.
+        </div>
+
+        <div class="section">
+            📍 За вказаною адресою запрошуємо всіх бажаючих:
+        </div>
+
+        <div class="section">
+            🕊 Служба Божа <b>14:00</b><br>
+            👨‍👩‍👧‍👦 Робимо сімейне коло <b>15:30</b>
+        </div>
+
+        <div class="section">
+            Створюємо простір теплих знайомств, підтримки та нових родинних зв’язків.
+        </div>
+
+        <div class="section">
+            👨‍👩‍👧 Для родин з дітьми 0–14 років<br>
+            📝 Попередня реєстрація — <b>25 родин</b>
+        </div>
+
+        <div class="section">
+            📅 <b>21 червня 2026</b><br>
+            Відповідальні: Юліана • Лена
+        </div>
+
+        <div class="section">
+            📍 Weinbergstrasse 32, 8006 Zürich<br>
+            📞 +41 78 349 15 55
+        </div>
+
+        <div class="section" style="font-size:22px; text-align:center; margin-top:20px;">
+            ❤️ Будемо раді бачити Вашу родину ❤️
+        </div>
+    </div>
+</div>
+
+<!-- Floating Button -->
+<button id="openModal" class="floating-btn">Записатися</button>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+
+    <h2>Реєстрація</h2>
+
+    <form id="regForm">
+      <label>Ім’я (контактне лице)</label>
+      <input type="text" name="name" required>
+
+      <label>Номер телефону</label>
+      <input type="tel" name="phone" required>
+
+      <label>Email</label>
+      <input type="email" name="email">
+
+      <label>Кількість дітей (дівчина/хлопець, вік)</label>
+      <textarea name="kids" placeholder="Наприклад: 1 дівчина (5 років), 1 хлопець (8 років)"></textarea>
+
+      <button type="submit">Відправити</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+</div>
+
+<script>
+  const FORM_URL = "YOUR_GOOGLE_SCRIPT_URL_HERE";
+
+  const modal = document.getElementById("modal");
+  const openBtn = document.getElementById("openModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  openBtn.onclick = () => modal.style.display = "flex";
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+
+  document.getElementById("regForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    await fetch(FORM_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    document.getElementById("result").innerText = "Дякуємо! Заявку отримано.";
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
