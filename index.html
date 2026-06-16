@@ -13,6 +13,12 @@
         color: #333;
     }
 
+    .page {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 16px;
+    }
+
     .hero {
         width: 100%;
         max-width: 600px;
@@ -20,6 +26,8 @@
         background: white;
         padding: 20px;
         text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .hero img {
@@ -56,6 +64,27 @@
         border-radius: 12px;
         margin-top: 20px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Блок с фото (Leding 01) */
+    .photo-block {
+        margin-top: 24px;
+        background: #fff;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .photo-block img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .photo-caption {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #555;
     }
 
     .floating-btn {
@@ -139,52 +168,66 @@
 
 <body>
 
-<div class="hero">
-    <img src="FAMILY_PHOTO.jpg" alt="Родинне коло">
+<div class="page">
 
-    <h1>Родинне коло</h1>
-    <h2>Тепла зустріч родин</h2>
+    <!-- Leding 1 — афиша -->
+    <div class="hero">
+        <img src="AFISHA.jpg" alt="Родинне коло афіша">
 
-    <div class="tags">✨ Знайомства ✨ Спілкування ✨ Ігри ✨ Дружба ✨</div>
+        <h1>Родинне коло</h1>
+        <h2>Тепла зустріч родин</h2>
 
-    <div class="info-block">
-        <div class="section">
-            21 червня проводимо теплу зустріч родин у Цюриху.<br>
-            Без офіціозу — знайомства, спілкування, діти, чай.
-        </div>
+        <div class="tags">✨ Знайомства ✨ Спілкування ✨ Ігри ✨ Дружба ✨</div>
 
-        <div class="section">
-            📍 За вказаною адресою запрошуємо всіх бажаючих:
-        </div>
+        <div class="info-block">
+            <div class="section">
+                21 червня проводимо теплу зустріч родин у Цюриху.<br>
+                Без офіціозу — знайомства, спілкування, діти, чай.
+            </div>
 
-        <div class="section">
-            🕊 Служба Божа <b>14:00</b><br>
-            👨‍👩‍👧‍👦 Робимо сімейне коло <b>15:30</b>
-        </div>
+            <div class="section">
+                📍 За вказаною адресою запрошуємо всіх бажаючих:
+            </div>
 
-        <div class="section">
-            Створюємо простір теплих знайомств, підтримки та нових родинних зв’язків.
-        </div>
+            <div class="section">
+                🕊 Служба Божа <b>14:00</b><br>
+                👨‍👩‍👧‍👦 Робимо сімейне коло <b>15:30</b>
+            </div>
 
-        <div class="section">
-            👨‍👩‍👧 Для родин з дітьми 0–14 років<br>
-            📝 Попередня реєстрація — <b>25 родин</b>
-        </div>
+            <div class="section">
+                Створюємо простір теплих знайомств, підтримки та нових родинних зв’язків.
+            </div>
 
-        <div class="section">
-            📅 <b>21 червня 2026</b><br>
-            Відповідальні: Юліана • Лена
-        </div>
+            <div class="section">
+                👨‍👩‍👧 Для родин з дітьми 0–14 років<br>
+                📝 Попередня реєстрація — <b>25 родин</b>
+            </div>
 
-        <div class="section">
-            📍 Weinbergstrasse 32, 8006 Zürich<br>
-            📞 +41 78 349 15 55
-        </div>
+            <div class="section">
+                📅 <b>21 червня 2026</b><br>
+                Відповідальні: Юліана • Лена
+            </div>
 
-        <div class="section" style="font-size:22px; text-align:center; margin-top:20px;">
-            ❤️ Будемо раді бачити Вашу родину ❤️
+            <div class="section">
+                📍 Weinbergstrasse 32, 8006 Zürich<br>
+                📞 +41 78 349 15 55
+            </div>
+
+            <div class="section" style="font-size:22px; text-align:center; margin-top:20px;">
+                ❤️ Будемо раді бачити Вашу родину ❤️
+            </div>
         </div>
     </div>
+
+    <!-- Leding 01 — фото -->
+    <div class="photo-block">
+        <img src="PHOTO.jpg" alt="Родинне коло зустріч">
+
+        <div class="photo-caption">
+            Тепла зустріч родин у Цюриху: спілкування, ігри, діти та чай у дружньому просторі.
+        </div>
+    </div>
+
 </div>
 
 <!-- Floating Button -->
