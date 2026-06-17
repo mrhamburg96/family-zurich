@@ -8,136 +8,46 @@
 <style>
     body {
         margin: 0;
-        font-family: "Arial", sans-serif;
+        font-family: Arial, sans-serif;
         background: #f7f7f7;
         color: #333;
     }
 
-    .page {
+    .hero {
+        width: 100%;
         max-width: 900px;
         margin: 0 auto;
         padding: 16px;
     }
 
-    .hero {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-        background: white;
-        padding: 20px;
-        text-align: center;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
     .hero img {
         width: 100%;
         border-radius: 12px;
+        display: block;
     }
 
-    h1 {
-        font-size: 32px;
-        margin: 10px 0 0;
-        font-weight: 700;
-    }
-
-    h2 {
-        font-size: 22px;
-        margin: 5px 0 15px;
-        font-weight: 500;
-    }
-
-    .tags {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-
-    .section {
-        font-size: 18px;
-        line-height: 1.5;
-        margin: 15px 0;
-    }
-
-    .info-block {
-        background: #fff;
-        padding: 20px;
-        border-radius: 12px;
-        margin-top: 20px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    /* Блок с фото (Leding 01) */
-    .photo-block {
-        margin-top: 24px;
-        background: #fff;
-        padding: 16px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-
-    .photo-block img {
-        width: 100%;
-        border-radius: 12px;
-    }
-
-    .photo-caption {
-        margin-top: 10px;
-        font-size: 16px;
-        color: #555;
-    }
-
-    .floating-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #ff7b00;
-        color: white;
-        padding: 16px 22px;
-        border-radius: 50px;
-        font-size: 18px;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        z-index: 999;
-    }
-
-    /* Modal */
-    .modal {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.6);
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-    }
-
-    .modal-content {
+    .form-section {
+        max-width: 600px;
+        margin: 20px auto;
         background: #fff;
         padding: 24px;
         border-radius: 12px;
-        width: 90%;
-        max-width: 420px;
-        position: relative;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    .close {
-        position: absolute;
-        right: 16px;
-        top: 12px;
-        font-size: 28px;
-        cursor: pointer;
+    .form-section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 26px;
     }
 
-    form label {
+    label {
         display: block;
         margin-top: 12px;
         font-weight: bold;
     }
 
-    form input, form textarea {
+    input, textarea {
         width: 100%;
         padding: 10px;
         margin-top: 6px;
@@ -146,7 +56,7 @@
         font-size: 16px;
     }
 
-    form button {
+    button {
         margin-top: 20px;
         width: 100%;
         padding: 14px;
@@ -162,114 +72,73 @@
         margin-top: 10px;
         font-weight: bold;
         color: green;
+        text-align: center;
+    }
+
+    /* Floating button */
+    .floating-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #ff7b00;
+        color: white;
+        padding: 16px 22px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        z-index: 999;
     }
 </style>
 </head>
 
 <body>
 
-<div class="page">
-
-    <!-- Leding 1 — афиша -->
-    <div class="hero">
-        <img src="Leding 1.webp" alt="Родинне коло афіша">
-
-        <h1>Родинне коло</h1>
-        <h2>Тепла зустріч родин</h2>
-
-        <div class="tags">✨ Знайомства ✨ Спілкування ✨ Ігри ✨ Дружба ✨</div>
-
-        <div class="info-block">
-            <div class="section">
-                21 червня проводимо теплу зустріч родин у Цюриху.<br>
-                Без офіціозу — знайомства, спілкування, діти, чай.
-            </div>
-
-            <div class="section">
-                📍 За вказаною адресою запрошуємо всіх бажаючих:
-            </div>
-
-            <div class="section">
-                🕊 Служба Божа <b>14:00</b><br>
-                👨‍👩‍👧‍👦 Робимо сімейне коло <b>15:30</b>
-            </div>
-
-            <div class="section">
-                Створюємо простір теплих знайомств, підтримки та нових родинних зв’язків.
-            </div>
-
-            <div class="section">
-                👨‍👩‍👧 Для родин з дітьми 0–14 років<br>
-                📝 Попередня реєстрація — <b>25 родин</b>
-            </div>
-
-            <div class="section">
-                📅 <b>21 червня 2026</b><br>
-                Відповідальні: Юліана • Лена
-            </div>
-
-            <div class="section">
-                📍 Weinbergstrasse 32, 8006 Zürich<br>
-                📞 +41 78 349 15 55
-            </div>
-
-            <div class="section" style="font-size:22px; text-align:center; margin-top:20px;">
-                ❤️ Будемо раді бачити Вашу родину ❤️
-            </div>
-        </div>
-    </div>
-
-    <!-- Leding 01 — фото -->
-    <div class="photo-block">
-        <img src="PHOTO.jpg" alt="Родинне коло зустріч">
-
-        <div class="photo-caption">
-            Тепла зустріч родин у Цюриху: спілкування, ігри, діти та чай у дружньому просторі.
-        </div>
-    </div>
-
+<!-- Афиша -->
+<div class="hero">
+    <img src="Leding1.webp" alt="Родинне коло афіша">
 </div>
 
-<!-- Floating Button -->
-<button id="openModal" class="floating-btn">Записатися</button>
-
-<!-- Modal -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-
+<!-- Форма регистрации -->
+<div id="formBlock" class="form-section">
     <h2>Реєстрація</h2>
 
     <form id="regForm">
-      <label>Ім’я (контактне лице)</label>
-      <input type="text" name="name" required>
+        <label>Ім’я</label>
+        <input type="text" name="name" required>
 
-      <label>Номер телефону</label>
-      <input type="tel" name="phone" required>
+        <label>Телефон</label>
+        <input type="tel" name="phone" required>
 
-      <label>Email</label>
-      <input type="email" name="email">
+        <label>Email</label>
+        <input type="email" name="email">
 
-      <label>Кількість дітей (дівчина/хлопець, вік)</label>
-      <textarea name="kids" placeholder="Наприклад: 1 дівчина (5 років), 1 хлопець (8 років)"></textarea>
+        <label>Кількість дітей</label>
+        <input type="number" name="kids_total" min="0">
 
-      <button type="submit">Відправити</button>
+        <label>Кількість дітей (дівчина, вік)</label>
+        <textarea name="girls" placeholder="Наприклад: 1 дівчина (5 років)"></textarea>
+
+        <label>Кількість дітей (хлопець, вік)</label>
+        <textarea name="boys" placeholder="Наприклад: 1 хлопець (8 років)"></textarea>
+
+        <button type="submit">Відправити</button>
     </form>
 
     <div id="result"></div>
-  </div>
 </div>
+
+<!-- Плавающая кнопка -->
+<button class="floating-btn" onclick="scrollToForm()">Записатися</button>
 
 <script>
   const FORM_URL = "YOUR_GOOGLE_SCRIPT_URL_HERE";
 
-  const modal = document.getElementById("modal");
-  const openBtn = document.getElementById("openModal");
-  const closeBtn = document.getElementById("closeModal");
-
-  openBtn.onclick = () => modal.style.display = "flex";
-  closeBtn.onclick = () => modal.style.display = "none";
-  window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+  function scrollToForm() {
+      document.getElementById("formBlock").scrollIntoView({ behavior: "smooth" });
+  }
 
   document.getElementById("regForm").addEventListener("submit", async (e) => {
     e.preventDefault();
